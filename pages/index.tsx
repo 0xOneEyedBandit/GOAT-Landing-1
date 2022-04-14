@@ -12,7 +12,7 @@ import "animate.css"
  //import Part from "../src/particles"
 
 const Home: NextPage = () : JSX.Element => {
-  return (
+  return (<>{
     <div className={styles.container}>
       <Head>
         <title>GOAT MONEY</title>
@@ -36,7 +36,7 @@ const Home: NextPage = () : JSX.Element => {
         <h1 className={styles.description}>
           The next generation Avalanche memecoin.
         </h1>
-        <Timer></Timer>
+        {/* <Timer></Timer> */}
         <div className={styles.grid}>
             <button type= "button" className="button" ><a target="_blank" rel="noreferrer noopener" href= "https://one-eyed-bandit.gitbook.io/goat-money/">Docs</a> </button>
             <button className="button button2" disabled ><a target="_blank" rel="noreferrer noopener">DApp Soon</a></button>
@@ -86,7 +86,6 @@ const Home: NextPage = () : JSX.Element => {
 
       
     </div>
-  )
-}
+}</>)}
 
 export default Home
