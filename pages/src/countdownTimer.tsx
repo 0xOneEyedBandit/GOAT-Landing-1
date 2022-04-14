@@ -1,7 +1,7 @@
 import React from 'react';
 import {useCountdown} from '../../hooks/useCountdown.js';
 import DateTimeDisplay from './TimeDisplay';
-const ExpiredNotice = () => {
+const ExpiredNotice = () : JSX.Element => {
   return (
     <div className="expired-notice">
       <span>It&apos;s time anon!</span>
@@ -35,7 +35,7 @@ const ShowCounter = ({days, hours, minutes, seconds}:{ days: number; hours: numb
     </div>
   );
 };
-const CountdownTimer = ({ targetDate}: any) => {
+const CountdownTimer = ({ targetDate}: any) : JSX.Element => {
   const [days, hours, minutes, seconds] = useCountdown(targetDate);
 
   if (days + hours + minutes + seconds <= 0) {
