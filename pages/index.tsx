@@ -11,8 +11,8 @@ import Timer from "../pages/src/renderTimer"
 import "animate.css"
  //import Part from "../src/particles"
 
-const Home: NextPage = () => {
-  return (
+const Home: NextPage = () : JSX.Element => {
+  return (<>{
     <div className={styles.container}>
       <Head>
         <title>GOAT MONEY</title>
@@ -86,7 +86,6 @@ const Home: NextPage = () => {
 
       
     </div>
-  )
-}
+}</>)}
 
 export default Home

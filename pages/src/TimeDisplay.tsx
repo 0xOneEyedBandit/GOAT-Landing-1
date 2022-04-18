@@ -1,6 +1,6 @@
 import React from 'react';
 
-const DateTimeDisplay = ({ value, type, isDanger }) => {
+const DateTimeDisplay = ({value, type, isDanger}:{ value: number, type: string, isDanger: boolean }) : JSX.Element => {
   return (
     <div className={isDanger ? 'countdown danger' : 'countdown'}>
       <p >{value}</p>

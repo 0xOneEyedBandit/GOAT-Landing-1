@@ -1,16 +1,16 @@
 import React from 'react';
 import {useCountdown} from '../../hooks/useCountdown.js';
 import DateTimeDisplay from './TimeDisplay';
-const ExpiredNotice = () => {
+const ExpiredNotice = () : JSX.Element => {
   return (
     <div className="expired-notice">
-      <span>It's time anon!</span>
+      <span>It&apos;s time anon!</span>
       <p>LFG</p>
       <button className="button" ><a target="_blank" rel="noreferrer noopener" href= "https://one-eyed-bandit.gitbook.io/goat-money/">DApp</a></button>
     </div>
   );
 };
-const ShowCounter = ({ days, hours, minutes, seconds }) => {
+const ShowCounter = ({days, hours, minutes, seconds}:{ days: number; hours: number; minutes: number; seconds: number }) => {
   const dias = "Days" ;
   const horas = "Hours";
   const mins = "Mins";
@@ -35,7 +35,7 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
     </div>
   );
 };
-const CountdownTimer = ({ targetDate }) => {
+const CountdownTimer = ({ targetDate}: any) : JSX.Element => {
   const [days, hours, minutes, seconds] = useCountdown(targetDate);
 
   if (days + hours + minutes + seconds <= 0) {
